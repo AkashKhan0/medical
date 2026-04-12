@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="w-full h-fit uni px-5 relative">
         <div className="fix_w uni_col pb-5">
           {/* Navbar logo name */}
-          <div className="w-full sm:w-[85%] md:w-[70%] h-fit uni_col pt-5 gap-0 ">
+          <div className="w-full sm:w-[85%] md:w-[70%] h-fit uni_col gap-0 ">
             <Link href="/"><h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
               A Plus Mart BD
             </h1></Link>
@@ -28,10 +28,6 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="w-fit fixed h-fit top-0 left-0 z-10">
-            <img src="/images/bg2.png" alt="bg footer" className="w-fit h-fit object-contain opacity-20" />
         </div>
       </div>
     </>
