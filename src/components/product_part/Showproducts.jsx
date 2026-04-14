@@ -42,7 +42,7 @@ export default function Showproducts() {
         } else {
           setStyle({
             position: "fixed",
-            top: "0px",
+            top: "10px",
             width: sidebar.parentElement.offsetWidth + "px",
           });
         }
@@ -50,7 +50,7 @@ export default function Showproducts() {
         // normal position
         setStyle({
           position: "relative",
-          top: "0px",
+          top: "10px",
         });
       }
     };

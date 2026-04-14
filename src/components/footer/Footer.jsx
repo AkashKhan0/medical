@@ -10,10 +10,10 @@ export default function Footer() {
             {/* Logo */}
             <div className="w-full flex items-start justify-center sm:justify-center md:justify-start">
               <Link href="/" className="uni_col items-start gap-0 w-fit">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold inline-block">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl inline-block font-mono font-bold text-[#A21410]">
                   A Plus Mart BD
                 </h1>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold inline-block">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold inline-block font-mono text-[#A21410]">
                   Medical
                 </h3>
               </Link>
@@ -21,7 +21,7 @@ export default function Footer() {
 
             {/* quick Links */}
             <div className="w-full">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-center sm:text-center md:text-start mb-2">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-center sm:text-center md:text-start mb-2 text-[#A21410]">
                 Quick Links
               </h3>
               {/* menu items */}
@@ -43,7 +43,7 @@ export default function Footer() {
 
             {/* Contact Information */}
             <div className="w-full">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-center sm:text-center md:text-start">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-center sm:text-center md:text-start text-[#A21410]">
                 Contact Info
               </h3>
 
@@ -84,7 +84,7 @@ export default function Footer() {
                   <FaTiktok size={18} />
                 </a>
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl font-semibold text-center sm:text-center md:text-start">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold text-center sm:text-center md:text-start text-[#A21410]">
                 Pay with
               </h3>
               <div className="w-full">
