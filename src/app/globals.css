@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: #F4EBEC;
   color: #2b2a29;
 }
 .bdr {
@@ -44,6 +44,21 @@ body {
   background-color: #A21410;
 }
 .ftr_btn {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease forwards;
 }
