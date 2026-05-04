@@ -162,7 +162,7 @@ export default function Navbar() {
               
               {/* Icon */}
               <div
-                className={`transition-all duration-500 text-3xl
+                className={`transition-all duration-500 text-2xl
                 `}
               >
                 {item.icon}
