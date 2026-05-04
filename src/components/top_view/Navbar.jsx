@@ -78,16 +78,16 @@ export default function Navbar() {
           <div className="fix_w flex flex-col sm:flex-col md:flex-row items-center justify-between gap-1 sm:gap-1 md:gap-10">
             {/* Navbar logo name */}
             <div className="w-full sm:w-full md:w-fit min-w-fit h-fit gap-0 flex items-center justify-center sm:justify-center md:justify-start">
-              <Link href="/">
+              <Link href="/" className="text-center flex flex-col items-center md:items-start">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#A21410]">
                   A Plus Mart BD
                 </h1>
                 <div className="w-fit uni gap-3">
-                  <div className="w-[50px] h-[2.3px] bg-[#A21410] block sm:block md:hidden"></div>
+                  <div className="w-[40px] h-[2.3px] bg-[#A21410] block sm:block md:hidden"></div>
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#A21410]">
                     Medical
                   </h3>
-                  <div className="w-[50px] h-[2.3px] bg-[#A21410]"></div>
+                  <div className="w-[40px] h-[2.3px] bg-[#A21410]"></div>
                 </div>
               </Link>
             </div>
@@ -162,20 +162,17 @@ export default function Navbar() {
               
               {/* Icon */}
               <div
-                className={`transition-all duration-500 ${
-                  isActive ? "text-xs scale-90 opacity-70" : "text-2xl scale-110"
-                }`}
+                className={`transition-all duration-500 text-3xl
+                `}
               >
                 {item.icon}
               </div>
 
               {/* Text */}
               <h3
-                className={`uppercase font-semibold transition-all duration-500 ${
-                  isActive
-                    ? "text-base scale-110"
-                    : "text-xs scale-90 opacity-70"
-                }`}
+                className={`uppercase font-semibold
+                    text-xs
+                `}
               >
                 {item.label}
               </h3>

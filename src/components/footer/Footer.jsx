@@ -22,12 +22,7 @@ export default function Footer() {
                 href="/"
                 className="flex flex-col items-center md:items-start gap-0 w-fit mb-2"
               >
-                <h1 className="text-2xl sm:text-3xl md:text-4xl inline-block font-bold text-[#A21410]">
-                  A Plus Mart BD
-                </h1>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold inline-block text-[#A21410]">
-                  Medical
-                </h3>
+                <img src="/images/medical_martbd.png" alt="A Plus Mart BD Logo" className="w-[120px]" />
               </Link>
               <p className="text-lg font-medium text-center sm:text-center md:text-start">
                 Your trusted partner for premium quality surgical and medical
@@ -39,8 +34,8 @@ export default function Footer() {
 
               <div className="w-full flex flex-col items-center md:items-start gap-3 my-3">
                 <div className="w-full max-w-[250px] flex items-center justify-start gap-5">
-                  <div className="uni w-[45px] h-[45px] rounded-full bg-[#766540]">
-                    <RiShieldStarLine className="text-3xl text-[#e8e8e8]" />{" "}
+                  <div className="uni w-[45px] h-[45px] rounded-full bg-[#dedede]">
+                    <RiShieldStarLine className="text-3xl text-[#472428]" />{" "}
                   </div>
                   <div className="flex flex-col gap-0">
                     <h2 className="text-xl text-[#472428] font-semibold">
@@ -53,8 +48,8 @@ export default function Footer() {
                 </div>
 
                 <div className="w-full max-w-[250px] flex items-center justify-start gap-5">
-                  <div className="uni w-[45px] h-[45px] rounded-full bg-[#766540]">
-                    <TbTruckDelivery className="text-3xl text-[#e8e8e8]" />{" "}
+                  <div className="uni w-[45px] h-[45px] rounded-full bg-[#dedede]">
+                    <TbTruckDelivery className="text-3xl text-[#472428]" />{" "}
                   </div>
                   <div className="flex flex-col gap-0">
                     <h2 className="text-xl text-[#472428] font-semibold">
@@ -67,8 +62,8 @@ export default function Footer() {
                 </div>
 
                 <div className="w-full max-w-[250px] flex items-center justify-start gap-5">
-                  <div className="uni w-[45px] h-[45px] rounded-full bg-[#766540]">
-                    <RiCustomerServiceFill className="text-3xl text-[#e8e8e8]" />{" "}
+                  <div className="uni w-[45px] h-[45px] rounded-full bg-[#dedede]">
+                    <RiCustomerServiceFill className="text-3xl text-[#472428]" />{" "}
                   </div>
                   <div className="flex flex-col gap-0">
                     <h2 className="text-xl text-[#472428] font-semibold">
@@ -115,16 +110,16 @@ export default function Footer() {
 
               <div className="w-fit flex items-center gap-2">
                 <div className="w-[30px] h-[30px] uni rounded-full">
-                  <FaLocationDot className="text-[#766540] text-xl" />
+                  <FaLocationDot className="text-[#472428] text-xl" />
                 </div>
                 <p className="text-base text-[#472428] font-medium">
-                  Foysaliya Villa, 543/2 South Monipur, Mirpur Dhaka.
+                  South Monipur, Dhaka.
                 </p>
               </div>
 
               <div className="w-fit flex items-center gap-2">
                 <div className="w-[30px] h-[30px] uni rounded-full">
-                  <IoCall className="text-[#766540] text-xl" />
+                  <IoCall className="text-[#472428] text-xl" />
                 </div>
                 <p className="text-base text-[#472428] font-medium">
                   01635347489
@@ -133,7 +128,7 @@ export default function Footer() {
 
               <div className="w-fit flex items-center gap-2">
                 <div className="w-[30px] h-[30px] uni rounded-full">
-                  <IoLogoWhatsapp className="text-[#766540] text-xl" />
+                  <IoLogoWhatsapp className="text-[#472428] text-xl" />
                 </div>
                 <p className="text-base text-[#472428] font-medium">
                   01853838891
@@ -142,7 +137,7 @@ export default function Footer() {
 
               <div className="w-fit flex items-center gap-2">
                 <div className="w-[30px] h-[30px] uni rounded-full">
-                  <IoMdMail className="text-[#766540] text-xl" />
+                  <IoMdMail className="text-[#472428] text-xl" />
                 </div>
                 <p className="text-base text-[#472428] font-medium">
                   info@aplusmartbd.com
@@ -151,7 +146,7 @@ export default function Footer() {
 
               <div className="w-fit flex items-center gap-2">
                 <div className="w-[30px] h-[30px] uni rounded-full">
-                  <RiGlobalLine className="text-[#766540] text-xl" />
+                  <RiGlobalLine className="text-[#472428] text-xl" />
                 </div>
                 <a
                   href="https://aplusmartbd.com"
@@ -206,42 +201,42 @@ export default function Footer() {
                 <img
                   src="/images/bkash.png"
                   alt="pay with"
-                  className="w-[80px] max-w-fit h-[40px] object-contain"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
                 />
                 <img
                   src="/images/nagad.png"
                   alt="pay with"
-                  className="w-[80px] max-w-fit h-[40px] object-contain"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
                 />
                 <img
                   src="/images/Rocket.png"
                   alt="pay with"
-                  className="w-[80px] max-w-fit h-[40px] object-contain"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
                 />
                 <img
                   src="/images/upay.png"
                   alt="pay with"
-                  className="w-[80px] max-w-fit h-[40px] object-contain"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
                 />
                 <img
                   src="/images/islami.png"
                   alt="pay with"
-                  className="w-[80px] max-w-fit h-[40px] object-contain"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
                 />
                 <img
                   src="/images/Agrani_Bank.png"
                   alt="pay with"
-                  className="w-[80px] max-w-fit h-[40px] object-contain"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
                 />
                 <img
                   src="/images/dbbl.png"
                   alt="pay with"
-                  className="w-[80px] max-w-fit h-[40px] object-contain"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
                 />
                 <img
                   src="/images/pathao_pay.png"
                   alt="pay with"
-                  className="w-[80px] max-w-fit h-[40px] object-contain"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
                 />
               </div>
             </div>
@@ -272,12 +267,12 @@ export default function Footer() {
       </div>
 
       {/* Footer copy rights Content */}
-      <div className="w-full h-[120px] uni_col text-base font-normal text-[#ffda8a] text-center gap-0 bg-[#472428]">
-        <p>© 2025 A Plus Mart BD Medical Store. All rights reserved.</p>
-        <p>Powered By: A Plus Advertising Limited</p>
+      <div className="w-full h-[80px] uni_col text-xs font-normal text-[#ffffff] text-center gap-0 bg-[#472428]">
         <p>
           Trade licence No: <strong>2026-00831</strong>
         </p>
+        <p>© 2025 A Plus Mart BD Medical Store. All rights reserved.</p>
+        <p>Powered By: A Plus Advertising Limited</p>
       </div>
       <div className="w-full h-[60px] bg-[#472428] block md:hidden"></div>
     </>

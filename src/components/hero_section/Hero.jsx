@@ -27,18 +27,18 @@ export default function Hero() {
           <div className="absolute top-0 left-0 w-full h-full uni_col z-10 inset-0 bg-gradient-to-r from-[#f2f2f2] to-transparent">
             <div className="w-full sm:w-full md:w-[80%] px-5">
               <div className="w-fit flex items-center gap-2 mb-2">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#766540] uppercase">
+                <h3 className="text-xs sm:text-lg md:text-2xl font-semibold text-[#766540] uppercase">
                   Medical
                 </h3>
-                <div className="w-[50px] h-[2.5px] bg-[#766540]"></div>
+                <div className="w-[40px] h-[2.5px] bg-[#766540]"></div>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#161616]">
+              <h1 className="text-xl sm:text-4xl md:text-5xl font-semibold text-[#161616]">
                 Empowering Healthcare with
               </h1>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#63202D]">
+              <h1 className="text-xl sm:text-4xl md:text-5xl font-semibold text-[#63202D]">
                 Precision & Trust.
               </h1>
-              <p className="text-xl text-[#161616] w-full sm:w-[70%] md:w-[50%] mt-2">
+              <p className="text-base sm:text-lg text-[#161616] w-full sm:w-[70%] md:w-[50%] mt-2">
                 Delivering high-quality medical and surgical equipment at
                 wholesale prices across Bangladesh.
               </p>

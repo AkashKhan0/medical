@@ -304,7 +304,7 @@ export default function Contact() {
               <IoLocation /> Visit Us
             </div>
             <p className="text-lg font-medium text-[#161616]">
-              Foysaliya Villa, 543/2 South Monipur, Mirpur Dhaka.
+              South Monipur, Dhaka.
             </p>
             <p className="text-sm text-[#686868]">(Sat - Thu: 9 AM - 7 PM)</p>
           </div>
@@ -336,7 +336,7 @@ export default function Contact() {
             </div>
             <div className="flex items-center gap-3">
               <a
-                href="https://www.facebook.com/yourpage"
+                href="https://www.facebook.com/profile.php?id=61588858407537"
                 target="_blank"
                 className="text-lg font-medium text-[#161616] flex items-center gap-1"
               >
