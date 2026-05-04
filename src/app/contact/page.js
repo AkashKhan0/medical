@@ -226,23 +226,30 @@ export default function Contact() {
 
             <form onSubmit={handleMeetingSubmit}>
               <div className="w-full flex flex-col md:flex-row items-center gap-3">
+                <div className="w-full flex flex-col gap-1">
+                  <label className="text-base font-semibold">Preferred Date</label>
                 <input
                   type="date"
                   name="date"
                   placeholder="Preferred Date"
                   className="w-full py-1 px-3 rounded-md border"
-                />
-                <input
+                />  
+                </div>
+                <div className="w-full flex flex-col gap-1">
+                  <label className="text-base font-semibold">Preferred Time</label>
+                  <input
                   type="time"
                   name="time"
                   placeholder="Preferred Time"
                   className="w-full py-1 px-3 rounded-md border"
                 />
+                </div>
+                
               </div>
               <input
                 type="tel"
                 name="phone"
-                placeholder="Your Phone"
+                placeholder="Phone Number"
                 className="w-full mt-3 py-1 px-3 rounded-md border"
               />
               <button
