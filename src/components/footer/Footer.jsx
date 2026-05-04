@@ -201,42 +201,42 @@ export default function Footer() {
                 <img
                   src="/images/bkash.png"
                   alt="pay with"
-                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border shadow-xl"
                 />
                 <img
                   src="/images/nagad.png"
                   alt="pay with"
-                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border shadow-xl"
                 />
                 <img
                   src="/images/Rocket.png"
                   alt="pay with"
-                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border shadow-xl"
                 />
                 <img
                   src="/images/upay.png"
                   alt="pay with"
-                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border shadow-xl"
                 />
                 <img
                   src="/images/islami.png"
                   alt="pay with"
-                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border shadow-xl"
                 />
                 <img
                   src="/images/Agrani_Bank.png"
                   alt="pay with"
-                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border shadow-xl"
                 />
                 <img
                   src="/images/dbbl.png"
                   alt="pay with"
-                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border shadow-xl"
                 />
                 <img
                   src="/images/pathao_pay.png"
                   alt="pay with"
-                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border"
+                  className="w-[80px] h-[40px] object-contain bg-white p-1 rounded border shadow-xl"
                 />
               </div>
             </div>

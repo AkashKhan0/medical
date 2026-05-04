@@ -169,25 +169,25 @@ export default function Contact() {
                     type="text"
                     name="name"
                     placeholder="Your Name"
-                    className="w-full py-1 px-3 rounded-md border"
+                    className="w-full py-2 px-3 rounded-md border shadow-lg focus:shadow focus:outline-none"
                   />
                   <input
                     type="tel"
                     name="phone"
-                    placeholder="Your Phone"
-                    className="w-full py-1 px-3 rounded-md border"
+                    placeholder="Phone Number"
+                    className="w-full py-2 px-3 rounded-md border shadow-lg focus:shadow focus:outline-none"
                   />
                 </div>
                 <input
                   type="email"
                   name="email"
                   placeholder="Your Email"
-                  className="w-full mt-3 py-1 px-3 rounded-md border"
+                  className="w-full mt-3 py-2 px-3 rounded-md border shadow-lg focus:shadow focus:outline-none"
                 />
                 <textarea
                   name="message"
                   placeholder="Your Message"
-                  className="w-full mt-3 py-1 px-3 rounded-md h-[100px] border"
+                  className="w-full mt-3 py-1 px-3 rounded-md h-[100px] border shadow-lg focus:shadow focus:outline-none"
                 ></textarea>
                 <button
                   type="submit"
@@ -232,7 +232,7 @@ export default function Contact() {
                   type="date"
                   name="date"
                   placeholder="Preferred Date"
-                  className="w-full py-1 px-3 rounded-md border"
+                  className="w-full py-2 px-3 rounded-md border shadow-lg focus:shadow focus:outline-none"
                 />  
                 </div>
                 <div className="w-full flex flex-col gap-1">
@@ -241,7 +241,7 @@ export default function Contact() {
                   type="time"
                   name="time"
                   placeholder="Preferred Time"
-                  className="w-full py-1 px-3 rounded-md border"
+                  className="w-full py-2 px-3 rounded-md border shadow-lg focus:shadow focus:outline-none"
                 />
                 </div>
                 
@@ -250,7 +250,7 @@ export default function Contact() {
                 type="tel"
                 name="phone"
                 placeholder="Phone Number"
-                className="w-full mt-3 py-1 px-3 rounded-md border"
+                className="w-full mt-3 py-2 px-3 rounded-md border shadow-lg focus:shadow focus:outline-none"
               />
               <button
                 type="submit"
