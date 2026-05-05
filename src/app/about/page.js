@@ -220,7 +220,7 @@ export default function About() {
           </div>
         </div>
 
-{/* Global Reach */}
+        {/* Global Reach */}
         <div className="fix_w my-10 relative h-[280px] flex items-center justify-between">
           <div className="w-full flex flex-col items-center md:items-start justify-center z-50">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#63202D] mb-3">
@@ -263,7 +263,7 @@ export default function About() {
 
           <div className="w-fit flex gap-1 sm:gap-2 md:gap-5 mt-2">
             <Link
-              href="https://wa.me/8801XXXXXXXXX"
+              href="https://wa.me/8801635347489"
               target="_blank"
               className="flex items-center gap-2 bg-[#25D366] text-white text-base sm:text-lg hover:bg-[#1ebe5d] font-semibold py-1.5 px-4 rounded-lg transition duration-300"
             >
@@ -272,7 +272,7 @@ export default function About() {
             </Link>
 
             <Link
-              href="https://m.me/yourpage"
+              href="https://m.me/aplusmartbdmedicalsurgical"
               target="_blank"
               className="flex items-center gap-2 bg-[#0084FF] text-white text-base sm:text-lg hover:bg-[#006fd6] font-semibold py-1.5 px-4 rounded-lg transition duration-300"
             >

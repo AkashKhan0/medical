@@ -22,7 +22,11 @@ export default function Footer() {
                 href="/"
                 className="flex flex-col items-center md:items-start gap-0 w-fit mb-2"
               >
-                <img src="/images/medical_martbd.png" alt="A Plus Mart BD Logo" className="w-[120px]" />
+                <img
+                  src="/images/medical_martbd.png"
+                  alt="A Plus Mart BD Logo"
+                  className="w-[120px]"
+                />
               </Link>
               <p className="text-lg font-medium text-center sm:text-center md:text-start">
                 Your trusted partner for premium quality surgical and medical
@@ -116,32 +120,43 @@ export default function Footer() {
                   South Monipur, Dhaka.
                 </p>
               </div>
-
+              {/* phone number */}
               <div className="w-fit flex items-center gap-2">
                 <div className="w-[30px] h-[30px] uni rounded-full">
                   <IoCall className="text-[#472428] text-xl" />
                 </div>
-                <p className="text-base text-[#472428] font-medium">
-                  01635347489
-                </p>
+                <a
+                  href="tel:+8801635347489"
+                  className="text-base text-[#472428] font-medium"
+                >
+                  +8801635347489
+                </a>
               </div>
-
+              {/* WhatsApp */}
               <div className="w-fit flex items-center gap-2">
                 <div className="w-[30px] h-[30px] uni rounded-full">
                   <IoLogoWhatsapp className="text-[#472428] text-xl" />
                 </div>
-                <p className="text-base text-[#472428] font-medium">
+                <a
+                  href="https://wa.me/8801853838891"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base text-[#472428] font-medium"
+                >
                   01853838891
-                </p>
+                </a>
               </div>
-
+              {/* email */}
               <div className="w-fit flex items-center gap-2">
                 <div className="w-[30px] h-[30px] uni rounded-full">
                   <IoMdMail className="text-[#472428] text-xl" />
                 </div>
-                <p className="text-base text-[#472428] font-medium">
+                <a
+                  href="mailto:info@aplusmartbd.com"
+                  className="text-base text-[#472428] font-medium"
+                >
                   info@aplusmartbd.com
-                </p>
+                </a>
               </div>
 
               <div className="w-fit flex items-center gap-2">
@@ -160,7 +175,7 @@ export default function Footer() {
               <div className="flex items-center justify-center sm:justify-center md:justify-start gap-4 my-2">
                 {/* Facebook */}
                 <a
-                  href="https://facebook.com/"
+                  href="https://www.facebook.com/aplusmartbdmedicalsurgical"
                   target="_blank"
                   className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-blue-600 hover:text-white transition duration-300 shadow-sm hover:scale-110"
                 >
@@ -169,7 +184,7 @@ export default function Footer() {
 
                 {/* Instagram */}
                 <a
-                  href="https://instagram.com/"
+                  href="https://instagram.com/aplusmartbd"
                   target="_blank"
                   className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 hover:text-white transition duration-300 shadow-sm hover:scale-110"
                 >
@@ -187,7 +202,7 @@ export default function Footer() {
 
                 {/* TikTok */}
                 <a
-                  href="https://tiktok.com/"
+                  href="https://tiktok.com/@aplusmartbd"
                   target="_blank"
                   className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-black hover:text-white transition duration-300 shadow-sm hover:scale-110"
                 >

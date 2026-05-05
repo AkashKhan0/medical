@@ -55,7 +55,7 @@ export default function Hero() {
                 </Link>
 
                 <Link
-                  href="https://m.me/yourpage"
+                  href="https://m.me/aplusmartbdmedicalsurgical"
                   target="_blank"
                   className="flex items-center gap-2 bg-[#0084FF] text-white text-base sm:text-lg hover:bg-[#006fd6] font-semibold py-1.5 px-4 rounded-lg transition duration-300"
                 >

@@ -1,68 +1,37 @@
 "use client";
-import products from "./item";
+// import products from "./item";
 import ProductCard from "./ProductCard";
 
-import { useEffect, useRef, useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Showproducts() {
   const [page, setPage] = useState(0);
+  const [products, setProducts] = useState([]);
   const perPage = 20;
   const start = page * perPage;
   const end = start + perPage;
   const currentItems = products.slice(start, end);
   const totalPages = Math.ceil(products.length / perPage);
-  // const sectionRef = useRef(null);
-  // const sidebarRef = useRef(null);
-  // const [style, setStyle] = useState({});
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const section = sectionRef.current;
-  //     const sidebar = sidebarRef.current;
-  //     if (!section || !sidebar) return;
+   // 🔥 FETCH DATA FROM BACKEND
+ useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/products`
+        );
+        const data = await res.json();
+        setProducts(data);
+      } catch (err) {
+        console.log("Fetch error:", err);
+      }
+    };
 
-  //     const sectionTop = section.offsetTop;
-  //     const sectionHeight = section.offsetHeight;
-  //     const sidebarHeight = sidebar.offsetHeight;
-  //     const scrollY = window.scrollY;
-
-  //     const footerOffset = 150; // footer height
-
-  //     // START sticking point
-  //     if (scrollY >= sectionTop) {
-  //       // STOP point (footer er age)
-  //       if (
-  //         scrollY + sidebarHeight >=
-  //         sectionTop + sectionHeight - footerOffset
-  //       ) {
-  //         setStyle({
-  //           position: "absolute",
-  //           top: sectionHeight - sidebarHeight - footerOffset + "px",
-  //         });
-  //       } else {
-  //         setStyle({
-  //           position: "fixed",
-  //           top: "0px",
-  //           width: sidebar.parentElement.offsetWidth + "px",
-  //         });
-  //       }
-  //     } else {
-  //       // normal position
-  //       setStyle({
-  //         position: "relative",
-  //         top: "0px",
-  //       });
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+    fetchProducts();
+  }, []);
 
   return (
-    <div
-      // ref={sectionRef}
-      className="w-full uni px-5 my-10 relative z-10"
+    <div className="w-full uni px-5 my-10 relative z-10"
     >
       <div className="fix_w flex gap-3">
         {/* LEFT */}
@@ -94,7 +63,7 @@ export default function Showproducts() {
           {/* PRODUCTS GRID */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3">
             {currentItems.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard key={product._id} product={product} />
             ))}
           </div>
 
@@ -125,8 +94,6 @@ export default function Showproducts() {
         {/* RIGHT */}
         <div className="w-[20%] relative hidden sm:hidden md:block">
           <div
-            // ref={sidebarRef}
-            // style={style}
             className="w-full h-fit uni_col gap-3 sticky top-[80px]"
           >
             <div className="w-full h-auto">

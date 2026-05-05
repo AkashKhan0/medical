@@ -6,10 +6,10 @@ export default function ProductCard({ product }) {
     <div className="border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition bg-white flex flex-col justify-between">
       
       {/* IMAGE */}
-      <Link href={`/products/${product.id}`}>
+      <Link href={`/products/${product._id}`}>
         <div className="h-[240px] w-full overflow-hidden">
           <img
-            src={product.image}
+            src={product.images?.[0]?.url || "/images/placeholder.jpg"}
             alt={product.name}
             className="w-full h-full object-cover hover:scale-105 transition duration-300"
           />
@@ -24,11 +24,10 @@ export default function ProductCard({ product }) {
       </Link>
 
       {/* BUTTONS */}
-      <div className="flex border-t">
-        
+      <div className="flex border-t">        
         {/* MESSENGER */}
         <a
-          href="https://m.me/aaplusmartbd"
+          href="https://m.me/aplusmartbdmedicalsurgical"
           target="_blank"
           className="w-1/2 flex items-center justify-center gap-2 py-2 text-blue-600 hover:bg-blue-50"
         >
