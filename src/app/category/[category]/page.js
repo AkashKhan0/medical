@@ -26,7 +26,7 @@ export default async function CategoryPage({ params }) {
   );
 
   return (
-    <div className="w-full uni px-5 my-10 relative">
+    <div className="w-full uni px-5 my-10 relative h-fit min-h-[400px]">
     <div className="w-full fix_w">
       <h1 className="text-2xl font-bold mb-6">{category} Products</h1>
 
