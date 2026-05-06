@@ -15,7 +15,7 @@ export default function Footer() {
     <>
       <div className="w-full uni px-5 bg-[#c6c0bc50] relative overflow-hidden">
         <div className="fix_w h-fit uni_col gap-2 z-50">
-          <div className="w-full py-5 flex flex-col sm:flex-col md:flex-row items-stretch justify-between gap-5">
+          <div className="w-full pb-5 pt-10 flex flex-col sm:flex-col md:flex-row items-stretch justify-between gap-5">
             {/* Logo */}
             <div className="w-full flex flex-col justify-start items-center sm:items-center md:items-start border-r-0 md:border-r border-r-[#4724282b] pr-0 md:pr-5">
               <Link
@@ -107,20 +107,10 @@ export default function Footer() {
             </div>
 
             {/* Contact Information */}
-            <div className="w-full flex flex-col items-center sm:items-center md:items-start gap-2 border-r-0 md:border-r border-r-[#47242819]">
+            <div className="w-full flex flex-col items-center sm:items-center md:items-start gap-2">
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-center sm:text-center md:text-start text-[#A21410]">
                 Contact Info
               </h3>
-
-              {/* address */}
-              <div className="w-fit flex items-center gap-2">
-                <div className="w-[30px] h-[30px] uni rounded-full bg-[#472428]">
-                  <FaLocationDot className="text-[#ffffff] text-lg" />
-                </div>
-                <p className="text-lg text-[#472428] font-medium">
-                  Mirpur, Dhaka
-                </p>
-              </div>
               {/* phone number */}
               <div className="w-fit flex items-center gap-2">
                 <div className="w-[30px] h-[30px] uni rounded-full bg-[#472428]">

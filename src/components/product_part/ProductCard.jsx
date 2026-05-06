@@ -37,7 +37,7 @@ export default function ProductCard({ product }) {
 
         {/* WHATSAPP */}
         <a
-          href="https://wa.me/8801853838891"
+          href="https://wa.me/8801533436559"
           target="_blank"
           className="w-1/2 flex items-center justify-center gap-2 py-2 text-green-600 hover:bg-green-50 border-l"
         >

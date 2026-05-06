@@ -123,7 +123,7 @@ export default function Contact() {
             <div className="w-full sm:w-full md:w-[80%] mt-5 flex items-center gap-5 px-5 ">
               <div className="w-fit uni gap-1 sm:gap-2 md:gap-5 mt-2">
                 <Link
-                  href="https://wa.me/8801635347489"
+                  href="https://wa.me/8801533436559"
                   target="_blank"
                   className="flex items-center gap-2 bg-[#25D366] text-white text-base sm:text-lg hover:bg-[#1ebe5d] font-semibold py-1.5 px-4 rounded-lg transition duration-300"
                 >
@@ -269,16 +269,10 @@ export default function Contact() {
               <IoCallSharp /> Call Us
             </div>
             <a
-              href="tel:+8801853838891"
+              href="tel:+8801533436559"
               className="text-lg font-medium text-[#161616]"
             >
-              +88 01853838891
-            </a>
-            <a
-              href="tel:+8801635347489"
-              className="text-lg font-medium text-[#161616]"
-            >
-              +88 01635347489
+              +88 01533436559
             </a>
             <p className="text-sm text-[#686868]">(Sat - Thu: 9 AM - 7 PM)</p>
           </div>
@@ -289,16 +283,10 @@ export default function Contact() {
               <IoMail /> Email Us
             </div>
             <a
-              href="mailto:info@company.com"
+              href="mailto:aplusmartmedicalsurgical@gmail.com"
               className="text-lg font-medium text-[#161616]"
             >
-              info@company.com
-            </a>
-            <a
-              href="mailto:support@company.com"
-              className="text-lg font-medium text-[#161616]"
-            >
-              support@company.com
+              aplusmartmedicalsurgical@gmail.com
             </a>
             <p className="text-sm text-[#686868]">
               (We respond within 24 hours)
@@ -311,7 +299,7 @@ export default function Contact() {
               <IoLocation /> Visit Us
             </div>
             <p className="text-lg font-medium text-[#161616]">
-              South Monipur, Dhaka.
+              Mirpur, Dhaka.
             </p>
             <p className="text-sm text-[#686868]">(Sat - Thu: 9 AM - 7 PM)</p>
           </div>
@@ -322,16 +310,10 @@ export default function Contact() {
               <IoLogoWhatsapp /> WhatsApp Us
             </div>
             <a
-              href="https://wa.me/8801853838891"
+              href="https://wa.me/8801533436559"
               className="text-lg font-medium text-[#161616]"
             >
-              +88 01853838891
-            </a>
-            <a
-              href="https://wa.me/8801635347489"
-              className="text-lg font-medium text-[#161616]"
-            >
-              +88 01635347489
+              +88 01533436559
             </a>
             <p className="text-sm text-[#686868]">(Sat - Thu: 9 AM - 7 PM)</p>
           </div>
@@ -343,14 +325,14 @@ export default function Contact() {
             </div>
             <div className="flex items-center gap-3">
               <a
-                href="https://www.facebook.com/profile.php?id=61588858407537"
+                href="https://www.facebook.com/aplusmartbdmedicalsurgical"
                 target="_blank"
                 className="text-lg font-medium text-[#161616] flex items-center gap-1"
               >
                 <FaFacebook />
               </a>
               <a
-                href="https://www.instagram.com/yourpage"
+                href="https://www.instagram.com/aplusmartbdmedicalsurgical"
                 target="_blank"
                 className="text-lg font-medium text-[#161616] flex items-center gap-1"
               >

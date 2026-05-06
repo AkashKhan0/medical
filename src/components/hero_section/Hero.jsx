@@ -46,7 +46,7 @@ export default function Hero() {
             <div className="w-full sm:w-full md:w-[80%] mt-5 flex items-center gap-5 px-5 ">
               <div className="w-fit uni gap-1 sm:gap-2 md:gap-5 mt-2">
                 <Link
-                  href="https://wa.me/8801635347489"
+                  href="https://wa.me/8801533436559"
                   target="_blank"
                   className="flex items-center gap-2 bg-[#25D366] text-white text-base sm:text-lg hover:bg-[#1ebe5d] font-semibold py-1.5 px-4 rounded-lg transition duration-300"
                 >

@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
+import Link from "next/link";
+import { FaFacebookMessenger, FaWhatsapp } from "react-icons/fa";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -16,7 +18,7 @@ export default function ProductDetails() {
       try {
         const res = await fetch(
           `${process.env.NEXT_PUBLIC_API_URL}/api/products`,
-          { cache: "no-store" }
+          { cache: "no-store" },
         );
 
         const data = await res.json();
@@ -45,83 +47,128 @@ export default function ProductDetails() {
   const images = product.images || [];
 
   return (
-    <div className="max-w-3xl mx-auto p-5">
-      {/* MAIN IMAGE */}
-      <div className="w-full bg-white rounded shadow-lg">
-        <img
-          src={images?.[0]?.url || "/images/placeholder.jpg"}
-          className="w-full max-h-[350px] object-contain cursor-pointer"
-          alt={product.name}
-          onClick={() => setSelectedIndex(0)}
-        />
-      </div>
-
-      {/* OTHER IMAGES */}
-      <div className="mt-3 flex justify-start md:justify-center gap-5 overflow-x-scroll no-scrollbar w-full">
-        {images.slice(1).map((img, index) => (
+    <>
+      <div className="max-w-3xl mx-auto p-5">
+        {/* MAIN IMAGE */}
+        <div className="w-full bg-white rounded shadow-lg">
           <img
-            key={index}
-            src={img.url || "/images/placeholder.jpg"}
-            className="w-fit h-[130px] cursor-pointer bg-white shadow rounded object-contain"
+            src={images?.[0]?.url || "/images/placeholder.jpg"}
+            className="w-full max-h-[350px] object-contain cursor-pointer"
             alt={product.name}
-            onClick={() => setSelectedIndex(index + 1)}
+            onClick={() => setSelectedIndex(0)}
           />
-        ))}
+        </div>
+
+        {/* OTHER IMAGES */}
+        <div className="mt-3 flex justify-start md:justify-center gap-5 overflow-x-scroll no-scrollbar w-full">
+          {images.slice(1).map((img, index) => (
+            <img
+              key={index}
+              src={img.url || "/images/placeholder.jpg"}
+              className="w-fit h-[130px] cursor-pointer bg-white shadow rounded object-contain"
+              alt={product.name}
+              onClick={() => setSelectedIndex(index + 1)}
+            />
+          ))}
+        </div>
+
+        {/* PRODUCT INFO */}
+        <h1 className="text-2xl font-bold mt-5">{product.name}</h1>
+
+        {product.title && (
+          <h2 className="text-lg text-gray-600 mt-1">{product.title}</h2>
+        )}
+
+        {product.description && (
+          <p className="mt-3 text-gray-600">{product.description}</p>
+        )}
+
+        {/* ================= MODAL ================= */}
+        {selectedIndex !== null && images.length > 0 && (
+          <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-[9999999]">
+            {/* CLOSE */}
+            <button
+              className="absolute top-5 right-5 text-white text-3xl"
+              onClick={() => setSelectedIndex(null)}
+            >
+              ✕
+            </button>
+
+            {/* PREV */}
+            <button
+              className="absolute left-5 text-white text-3xl"
+              onClick={() =>
+                setSelectedIndex(
+                  (prev) => (prev - 1 + images.length) % images.length,
+                )
+              }
+            >
+              ◀
+            </button>
+
+            {/* IMAGE */}
+            <img
+              src={images[selectedIndex]?.url || "/images/placeholder.jpg"}
+              className="max-h-[90vh] max-w-[90vw] object-contain"
+              alt="Preview"
+            />
+
+            {/* NEXT */}
+            <button
+              className="absolute right-5 text-white text-3xl"
+              onClick={() =>
+                setSelectedIndex((prev) => (prev + 1) % images.length)
+              }
+            >
+              ▶
+            </button>
+          </div>
+        )}
       </div>
 
-      {/* PRODUCT INFO */}
-      <h1 className="text-2xl font-bold mt-5">{product.name}</h1>
+      <div className="w-full h-auto uni_col px-5">
+        <div className="fix_w">
+          {/* Call to action */}
+          <div className="fix_w mt-5">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#63202D] mb-5 text-center">
+              Call To Action
+            </h1>
+          </div>
 
-      {product.title && (
-        <h2 className="text-lg text-gray-600 mt-1">{product.title}</h2>
-      )}
+          {/* looking for wholesale */}
+          <div className="fix_w mb-5 p-5 rounded-lg shadow-xl hover:shadow-sm duration-300 uni_col bg-[#63202D]">
+            <h1 className="text-xl sm:text-2xl md:text-3xl text-center text-[#c3c3c3]">
+              Looking for reliable medical and surgical equipment at wholesale
+              prices?
+            </h1>
 
-      {product.description && (
-        <p className="mt-3 text-gray-600">{product.description}</p>
-      )}
+            <h2 className="text-base sm:text-lg md:text-xl text-center text-[#d4d4d4] py-1">
+              Get in touch with us today and experience quality, affordability,
+              and trusted service.
+            </h2>
 
-      {/* ================= MODAL ================= */}
-      {selectedIndex !== null && images.length > 0 && (
-        <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-[9999999]">
-          
-          {/* CLOSE */}
-          <button
-            className="absolute top-5 right-5 text-white text-3xl"
-            onClick={() => setSelectedIndex(null)}
-          >
-            ✕
-          </button>
+            <div className="w-fit flex gap-1 sm:gap-2 md:gap-5 mt-2">
+              <Link
+                href="https://wa.me/8801533436559"
+                target="_blank"
+                className="flex items-center gap-2 bg-[#25D366] text-white text-base sm:text-lg hover:bg-[#1ebe5d] font-semibold py-1.5 px-4 rounded-lg transition duration-300"
+              >
+                <FaWhatsapp className="text-base sm:text-xl" />
+                WhatsApp
+              </Link>
 
-          {/* PREV */}
-          <button
-            className="absolute left-5 text-white text-3xl"
-            onClick={() =>
-              setSelectedIndex(
-                (prev) => (prev - 1 + images.length) % images.length
-              )
-            }
-          >
-            ◀
-          </button>
-
-          {/* IMAGE */}
-          <img
-            src={images[selectedIndex]?.url || "/images/placeholder.jpg"}
-            className="max-h-[90vh] max-w-[90vw] object-contain"
-            alt="Preview"
-          />
-
-          {/* NEXT */}
-          <button
-            className="absolute right-5 text-white text-3xl"
-            onClick={() =>
-              setSelectedIndex((prev) => (prev + 1) % images.length)
-            }
-          >
-            ▶
-          </button>
+              <Link
+                href="https://m.me/aplusmartbdmedicalsurgical"
+                target="_blank"
+                className="flex items-center gap-2 bg-[#0084FF] text-white text-base sm:text-lg hover:bg-[#006fd6] font-semibold py-1.5 px-4 rounded-lg transition duration-300"
+              >
+                <FaFacebookMessenger className="text-base sm:text-xl" />
+                Messenger
+              </Link>
+            </div>
+          </div>
         </div>
-      )}
-    </div>
+      </div>
+    </>
   );
 }
