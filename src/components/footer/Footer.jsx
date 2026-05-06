@@ -13,11 +13,11 @@ import { TbTruckDelivery } from "react-icons/tb";
 export default function Footer() {
   return (
     <>
-      <div className="w-full uni px-5 bg-[#c6c0bc] relative overflow-hidden">
+      <div className="w-full uni px-5 bg-[#c6c0bc50] relative overflow-hidden">
         <div className="fix_w h-fit uni_col gap-2 z-50">
-          <div className="w-full py-5 flex flex-col sm:flex-col md:flex-row items-stretch justify-between gap-3">
+          <div className="w-full py-5 flex flex-col sm:flex-col md:flex-row items-stretch justify-between gap-5">
             {/* Logo */}
-            <div className="w-full flex flex-col justify-start items-center sm:items-center md:items-start">
+            <div className="w-full flex flex-col justify-start items-center sm:items-center md:items-start border-r-0 md:border-r border-r-[#4724282b] pr-0 md:pr-5">
               <Link
                 href="/"
                 className="flex flex-col items-center md:items-start gap-0 w-fit mb-2"
@@ -28,17 +28,17 @@ export default function Footer() {
                   className="w-[120px]"
                 />
               </Link>
-              <p className="text-lg font-medium text-center sm:text-center md:text-start">
+              <p className="text-lg mt-3 font-medium text-center sm:text-center md:text-start">
                 Your trusted partner for premium quality surgical and medical
                 instruments.
               </p>
-              <p className="text-lg font-medium text-center">
+              <p className="text-lg font-medium text-center mb-0 md:mb-5">
                 Precision. Reliability. Care.
               </p>
 
               <div className="w-full flex flex-col items-center md:items-start gap-3 my-3">
                 <div className="w-full max-w-[250px] flex items-center justify-start gap-5">
-                  <div className="uni w-[45px] h-[45px] rounded-full bg-[#dedede]">
+                  <div className="uni w-[45px] h-[45px] rounded-full bg-[#dedede] border border-[#47242884]">
                     <RiShieldStarLine className="text-3xl text-[#472428]" />{" "}
                   </div>
                   <div className="flex flex-col gap-0">
@@ -52,7 +52,7 @@ export default function Footer() {
                 </div>
 
                 <div className="w-full max-w-[250px] flex items-center justify-start gap-5">
-                  <div className="uni w-[45px] h-[45px] rounded-full bg-[#dedede]">
+                  <div className="uni w-[45px] h-[45px] rounded-full bg-[#dedede] border border-[#47242884]">
                     <TbTruckDelivery className="text-3xl text-[#472428]" />{" "}
                   </div>
                   <div className="flex flex-col gap-0">
@@ -66,7 +66,7 @@ export default function Footer() {
                 </div>
 
                 <div className="w-full max-w-[250px] flex items-center justify-start gap-5">
-                  <div className="uni w-[45px] h-[45px] rounded-full bg-[#dedede]">
+                  <div className="uni w-[45px] h-[45px] rounded-full bg-[#dedede] border border-[#47242884]">
                     <RiCustomerServiceFill className="text-3xl text-[#472428]" />{" "}
                   </div>
                   <div className="flex flex-col gap-0">
@@ -82,7 +82,7 @@ export default function Footer() {
             </div>
 
             {/* quick Links */}
-            <div className="w-full">
+            <div className="w-full border-r-0 md:border-r border-r-[#4724282b] pr-0 md:pr-5">
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-center sm:text-center md:text-start mb-2 text-[#A21410]">
                 Quick Links
               </h3>
@@ -107,68 +107,56 @@ export default function Footer() {
             </div>
 
             {/* Contact Information */}
-            <div className="w-full flex flex-col items-center sm:items-center md:items-start gap-2">
+            <div className="w-full flex flex-col items-center sm:items-center md:items-start gap-2 border-r-0 md:border-r border-r-[#47242819]">
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-center sm:text-center md:text-start text-[#A21410]">
                 Contact Info
               </h3>
 
+              {/* address */}
               <div className="w-fit flex items-center gap-2">
-                <div className="w-[30px] h-[30px] uni rounded-full">
-                  <FaLocationDot className="text-[#472428] text-xl" />
+                <div className="w-[30px] h-[30px] uni rounded-full bg-[#472428]">
+                  <FaLocationDot className="text-[#ffffff] text-lg" />
                 </div>
-                <p className="text-base text-[#472428] font-medium">
-                  South Monipur, Dhaka.
+                <p className="text-lg text-[#472428] font-medium">
+                  Mirpur, Dhaka
                 </p>
               </div>
               {/* phone number */}
               <div className="w-fit flex items-center gap-2">
-                <div className="w-[30px] h-[30px] uni rounded-full">
-                  <IoCall className="text-[#472428] text-xl" />
+                <div className="w-[30px] h-[30px] uni rounded-full bg-[#472428]">
+                  <IoCall className="text-[#ffffff] text-lg" />
                 </div>
                 <a
-                  href="tel:+8801635347489"
-                  className="text-base text-[#472428] font-medium"
+                  href="tel:+8801533436559"
+                  className="text-lg text-[#472428] font-medium"
                 >
-                  +8801635347489
+                  +8801533436559
                 </a>
               </div>
               {/* WhatsApp */}
               <div className="w-fit flex items-center gap-2">
-                <div className="w-[30px] h-[30px] uni rounded-full">
-                  <IoLogoWhatsapp className="text-[#472428] text-xl" />
+                <div className="w-[30px] h-[30px] uni rounded-full bg-[#472428]">
+                  <IoLogoWhatsapp className="text-[#ffffff] text-lg" />
                 </div>
                 <a
-                  href="https://wa.me/8801853838891"
+                  href="https://wa.me/8801533436559"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base text-[#472428] font-medium"
+                  className="text-lg text-[#472428] font-medium"
                 >
-                  01853838891
+                  +8801533436559
                 </a>
               </div>
               {/* email */}
               <div className="w-fit flex items-center gap-2">
-                <div className="w-[30px] h-[30px] uni rounded-full">
-                  <IoMdMail className="text-[#472428] text-xl" />
+                <div className="w-[30px] h-[30px] uni rounded-full bg-[#472428]">
+                  <IoMdMail className="text-[#ffffff] text-lg" />
                 </div>
                 <a
-                  href="mailto:info@aplusmartbd.com"
-                  className="text-base text-[#472428] font-medium"
+                  href="mailto:aplusmartmedicalsurgical@gmail.com"
+                  className="text-lg text-[#472428] font-medium"
                 >
-                  info@aplusmartbd.com
-                </a>
-              </div>
-
-              <div className="w-fit flex items-center gap-2">
-                <div className="w-[30px] h-[30px] uni rounded-full">
-                  <RiGlobalLine className="text-[#472428] text-xl" />
-                </div>
-                <a
-                  href="https://aplusmartbd.com"
-                  target="_blank"
-                  className="text-base text-[#472428] font-medium"
-                >
-                  https://aplusmartbd.com
+                  aplusmartmedicalsurgical@gmail.com
                 </a>
               </div>
 
@@ -177,7 +165,7 @@ export default function Footer() {
                 <a
                   href="https://www.facebook.com/aplusmartbdmedicalsurgical"
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-blue-600 hover:text-white transition duration-300 shadow-sm hover:scale-110"
+                  className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 hover:text-gray-600 bg-blue-600 text-white transition duration-300 shadow-sm hover:scale-110"
                 >
                   <FaFacebookF size={18} />
                 </a>
@@ -186,16 +174,16 @@ export default function Footer() {
                 <a
                   href="https://instagram.com/aplusmartbd"
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 hover:text-white transition duration-300 shadow-sm hover:scale-110"
+                  className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gradient-to-r hover:text-gray-600 bg-gradient-to-r from-pink-500 hover:from-white hover:to-white to-yellow-500 text-white transition duration-300 shadow-sm hover:scale-110"
                 >
                   <FaInstagram size={18} />
                 </a>
 
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/8801853838891"
+                  href="https://wa.me/8801533436559"
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-green-500 hover:text-white transition duration-300 shadow-sm hover:scale-110"
+                  className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 hover:text-gray-600 bg-green-500 text-white transition duration-300 shadow-sm hover:scale-110"
                 >
                   <FaWhatsapp size={18} />
                 </a>
@@ -204,7 +192,7 @@ export default function Footer() {
                 <a
                   href="https://tiktok.com/@aplusmartbd"
                   target="_blank"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-black hover:text-white transition duration-300 shadow-sm hover:scale-110"
+                  className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 hover:text-gray-600 bg-black text-white transition duration-300 shadow-sm hover:scale-110"
                 >
                   <FaTiktok size={18} />
                 </a>
