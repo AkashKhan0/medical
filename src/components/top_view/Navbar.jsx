@@ -27,6 +27,7 @@ export default function Navbar() {
     { icon: <GiScalpelStrike />, label: "Surgical", href: "/category/Surgical" },
     { icon: <MdMedicalServices />, label: "Medical", href: "/category/Medical" },
     { icon: <MdCall />, label: "Contact", href: "/contact" },
+    { icon: <FaUserTie />, label: "About", href: "/about" },
   ];
 
   // loop animation
@@ -162,7 +163,7 @@ export default function Navbar() {
               
               {/* Icon */}
               <div
-                className={`transition-all duration-500 text-2xl
+                className={`transition-all duration-500 text-xl
                 `}
               >
                 {item.icon}
@@ -171,7 +172,7 @@ export default function Navbar() {
               {/* Text */}
               <h3
                 className={`uppercase font-semibold
-                    text-xs
+                    text-[10px]
                 `}
               >
                 {item.label}

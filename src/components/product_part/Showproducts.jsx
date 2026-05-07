@@ -68,27 +68,88 @@ export default function Showproducts() {
           </div>
 
           {/* PAGINATION BUTTONS */}
-          <div className="flex gap-3 justify-center mt-5">
-            <button
-              disabled={page === 0}
-              onClick={() => setPage((p) => p - 1)}
-              className="px-4 py-2 border disabled:opacity-50"
-            >
-              Prev
-            </button>
+          <div className="flex items-center justify-center gap-2 mt-8 flex-wrap">
+  {/* Prev Button */}
+  <button
+    disabled={page === 0}
+    onClick={() => setPage((p) => p - 1)}
+    className="px-4 py-1 rounded-full border border-black text-[#000000] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#63202D] hover:text-white transition"
+  >
+    Prev
+  </button>
 
-            <span className="px-4 py-2">
-              {page + 1} / {totalPages}
-            </span>
+  {/* Page Numbers */}
+  {(() => {
+    const pages = [];
 
-            <button
-              disabled={page === totalPages - 1}
-              onClick={() => setPage((p) => p + 1)}
-              className="px-4 py-2 border disabled:opacity-50"
-            >
-              Next
-            </button>
-          </div>
+    // Total page কম হলে সব show করবে
+    if (totalPages <= 4) {
+      for (let i = 0; i < totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      // প্রথম 2 টা page
+      pages.push(0);
+      pages.push(1);
+
+      // dots
+      if (page > 2 && page < totalPages - 3) {
+        pages.push("start-dots");
+
+        pages.push(page - 1);
+        pages.push(page);
+
+        pages.push("end-dots");
+      } else {
+        pages.push("dots");
+      }
+
+      // শেষ 2 টা page
+      pages.push(totalPages - 2);
+      pages.push(totalPages - 1);
+    }
+
+    return pages.map((item, index) => {
+      // Dots
+      if (typeof item === "string") {
+        return (
+          <span
+            key={index}
+            className="w-8 h-8 flex items-center justify-center text-gray-500"
+          >
+            ...
+          </span>
+        );
+      }
+
+      // Page Button
+      return (
+        <button
+          key={index}
+          onClick={() => setPage(item)}
+          className={`w-8 h-8 uni rounded-full border transition font-medium
+            ${
+              page === item
+                ? "bg-[#63202D] text-white border-[#848484]"
+                : "bg-white text-black border-gray-300 hover:border-[#63202D] hover:bg-[#63202D] hover:text-[#f9f9f9]"
+            }
+          `}
+        >
+          {item + 1}
+        </button>
+      );
+    });
+  })()}
+
+  {/* Next Button */}
+  <button
+    disabled={page === totalPages - 1}
+    onClick={() => setPage((p) => p + 1)}
+    className="px-4 py-1 rounded-full border border-black text-[#000000] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#63202D] hover:text-white transition"
+  >
+    Next
+  </button>
+</div>
         </div>
 
         {/* RIGHT */}
