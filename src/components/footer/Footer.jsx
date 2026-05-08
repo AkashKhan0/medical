@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="fix_w h-fit uni_col gap-2 z-50">
           <div className="w-full pb-5 pt-10 flex flex-col sm:flex-col md:flex-row items-stretch justify-between gap-5">
             {/* Logo */}
-            <div className="w-full flex flex-col justify-start items-center sm:items-center md:items-start border-r-0 md:border-r border-r-[#4724282b] pr-0 md:pr-5">
+            <div className="w-full flex flex-col justify-start items-center sm:items-center md:items-start border-r-0 md:border-r border-r-[#4724286a] pr-0 md:pr-5">
               <Link
                 href="/"
                 className="flex flex-col items-center md:items-start gap-0 w-fit mb-2"
@@ -82,7 +82,7 @@ export default function Footer() {
             </div>
 
             {/* quick Links */}
-            <div className="w-full border-r-0 md:border-r border-r-[#4724282b] pr-0 md:pr-5">
+            <div className="w-full border-r-0 md:border-r border-r-[#4724286a] pr-0 md:pr-5">
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-center sm:text-center md:text-start mb-2 text-[#A21410]">
                 Quick Links
               </h3>
@@ -264,7 +264,7 @@ export default function Footer() {
         <p>
           Trade licence No: <strong>2026-00831</strong>
         </p>
-        <p>© 2025 A Plus Mart BD Medical Store. All rights reserved.</p>
+        <p>© 2025 A Plus Mart BD Medical & Surgical. All rights reserved.</p>
         <p>Powered By: A Plus Advertising Limited</p>
       </div>
       <div className="w-full h-[60px] bg-[#472428] block md:hidden"></div>
