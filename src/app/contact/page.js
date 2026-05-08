@@ -274,7 +274,7 @@ export default function Contact() {
             >
               +88 01533436559
             </a>
-            <p className="text-sm text-[#686868]">(Sat - Thu: 9 AM - 7 PM)</p>
+            <p className="text-sm text-[#686868]">(24/7 Available)</p>
           </div>
 
           {/* email us */}
@@ -289,7 +289,7 @@ export default function Contact() {
               aplusmartmedicalsurgical@gmail.com
             </a>
             <p className="text-sm text-[#686868]">
-              (We respond within 24 hours)
+              (24/7 Available)
             </p>
           </div>
 
@@ -301,7 +301,7 @@ export default function Contact() {
             <p className="text-lg font-medium text-[#161616]">
               Mirpur, Dhaka.
             </p>
-            <p className="text-sm text-[#686868]">(Sat - Thu: 9 AM - 7 PM)</p>
+            <p className="text-sm text-[#686868]">(24/7 Available)</p>
           </div>
 
           {/* whatsapp us */}
@@ -315,7 +315,7 @@ export default function Contact() {
             >
               +88 01533436559
             </a>
-            <p className="text-sm text-[#686868]">(Sat - Thu: 9 AM - 7 PM)</p>
+            <p className="text-sm text-[#686868]">(24/7 Available)</p>
           </div>
 
           {/* Follow us */}

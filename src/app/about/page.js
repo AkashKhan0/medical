@@ -1,12 +1,14 @@
 import Link from "next/link";
 import {
-  FaBriefcase,
   FaBriefcaseMedical,
   FaEye,
   FaFacebookMessenger,
+  FaNetworkWired,
+  FaOpencart,
   FaWhatsapp,
 } from "react-icons/fa";
 import { GoGoal } from "react-icons/go";
+import { TbWorld } from "react-icons/tb";
 
 export default function About() {
   return (
@@ -47,31 +49,51 @@ export default function About() {
             Our Business Network
           </h1>
 
-          <div className="w-full h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 items-stretch gap-5 place-items-center">
-            <div className="w-full rounded-lg shadow-xl hover:shadow-sm duration-300 max-w-[450px] uni_col gap-2 p-8 bg-[#F9F1EF]">
-              <FaBriefcase className="text-xl sm:text-2xl md:text-3xl text-[#63202d]" />
-              <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#63202d] text-center">
+          <div className="w-full h-auto flex items-center justify-center">
+            {/* 1st */}
+            <div className="w-full rounded-lg shadow-xl hover:shadow-sm duration-300 max-w-[450px] uni_col gap-2 p-8 bg-[#63202d]">
+              <FaBriefcaseMedical className="text-xl sm:text-2xl md:text-3xl text-[#F9F1EF]" />
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F9F1EF] text-center">
                 A Plus Communication (Parent Company)
               </h1>
-              <span className="w-full h-0.5 max-w-[300px] bg-[#63202d35]"></span>
-              <p className="text-base sm:text-lg md:text-xl font-normal text-[#484848] text-center">
+              <span className="w-full h-0.5 max-w-[300px] bg-[#f9f1ef32]"></span>
+              <p className="text-base sm:text-lg md:text-xl font-normal text-[#F9F1EF] text-center">
                 The core foundation of our group, managing operations, strategy,
                 and overall business direction.
               </p>
             </div>
-            <div className="w-full rounded-lg shadow-xl hover:shadow-sm duration-300 max-w-[450px] uni_col gap-2 p-8 bg-[#63202d]">
-              <FaBriefcaseMedical className="text-xl sm:text-2xl md:text-3xl text-[#F9F1EF]" />
-              <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F9F1EF] text-center">
+          </div>
+
+          <div className="w-full h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 items-stretch gap-5 place-items-center mt-5">
+            {/* 1st */}
+            <div className="w-full rounded-lg shadow-xl hover:shadow-sm duration-300 max-w-[450px] uni_col gap-2 p-8 bg-[#F9F1EF]">
+              <FaOpencart className="text-xl sm:text-2xl md:text-3xl text-[#63202d]" />
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#63202d] text-center">
                 A Plus Mart BD
               </h1>
-              <span className="w-full h-0.5 max-w-[300px] bg-[#f9f1ef32]"></span>
-              <p className="text-base sm:text-lg md:text-xl font-normal text-[#F9F1EF] text-center">
+              <span className="w-full h-0.5 max-w-[300px] bg-[#63202d35]"></span>
+              <p className="text-base sm:text-lg md:text-xl font-normal text-[#484848] text-center">
                 A general e-commerce platform focused on delivering a wide range
                 of products to customers across Bangladesh.
               </p>
             </div>
+
+            {/* 2nd */}
             <div className="w-full rounded-lg shadow-xl hover:shadow-sm duration-300 max-w-[450px] uni_col gap-2 p-8 bg-[#F9F1EF]">
-              <FaBriefcase className="text-xl sm:text-2xl md:text-3xl text-[#63202d]" />
+              <FaBriefcaseMedical className="text-xl sm:text-2xl md:text-3xl text-[#63202d]" />
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#63202d] text-center">
+                A Plus Mart Medical & Surgical
+              </h1>
+              <span className="w-full h-0.5 max-w-[300px] bg-[#63202d35]"></span>
+              <p className="text-base sm:text-lg md:text-xl font-normal text-[#484848] text-center">
+                A Plus Mart Medical & Surgical provides high-quality medical &
+                surgical products wholesale for hospitals, clinics & pharmacies.
+              </p>
+            </div>
+
+            {/* 3rd */}
+            <div className="w-full rounded-lg shadow-xl hover:shadow-sm duration-300 max-w-[450px] uni_col gap-2 p-8 bg-[#F9F1EF]">
+              <FaNetworkWired className="text-xl sm:text-2xl md:text-3xl text-[#63202d]" />
               <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#63202d] text-center">
                 A Plus Advertising Ltd.
               </h1>
@@ -221,19 +243,75 @@ export default function About() {
         </div>
 
         {/* Global Reach */}
-        <div className="fix_w my-10 relative h-[280px] flex items-center justify-between">
+        <div className="fix_w my-10 relative h-fit flex items-center justify-between">
           <div className="w-full flex flex-col items-center md:items-start justify-center z-50">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#63202D] mb-3">
               Global Reach
             </h1>
-            <p className="text-xl text-center text-[#161616] my-3">
+            <p className="text-xl text-center md:text-start text-[#161616] my-3 w-full max-w-[400px]">
               Serving customers across the globe with our extensive network.
             </p>
-            <img
-              src="/images/flag.png"
-              alt="what we offer"
-              className="w-[160px] h-full object-contain mt-5 opacity-80"
-            />
+            <div className="w-[70px] h-[2.5px] bg-[#63202D] rounded-full my-5"></div>
+            <div className="w-full max-w-[450px] flex items-start gap-3">
+              <div className="w-[40px] h-[40px] bg-[#63202D] hidden sm:flex items-center justify-center rounded-full text-white">
+                <TbWorld className="text-2xl" />
+              </div>
+              <div className="w-fit">
+                <h1 className="w-full text-2xl text-center md:text-start font-bold text-[#63202D]">
+                  Sourced From Trusted Countries
+                </h1>
+                <p className="text-xl text-center md:text-start text-[#161616] my-2 w-full max-w-[400px]">
+                  We import high-quality medical and surgical equipments from
+                  reliable manufactures in:
+                </p>
+              </div>
+            </div>
+            <div className="w-full flex flex-wrap items-center justify-center md:justify-start gap-2 mt-2">
+              <div className="w-[130px] h-fit uni_col gap-1 border-r border-[#63202d51]">
+                <img
+                  src="/images/japan.png"
+                  alt="what we offer"
+                  className="w-[60px] object-fill"
+                />
+                <h1 className="text-xl font-semibold text-[#63202D]">Japan</h1>
+              </div>
+
+              <div className="w-[130px] h-fit uni_col gap-1 border-r border-[#63202d51]">
+                <img
+                  src="/images/china.png"
+                  alt="what we offer"
+                  className="w-[60px] object-fill"
+                />
+                <h1 className="text-xl font-semibold text-[#63202D]">China</h1>
+              </div>
+
+              <div className="w-[130px] h-fit uni_col gap-1 border-r border-[#63202d51]">
+                <img
+                  src="/images/usa.png"
+                  alt="what we offer"
+                  className="w-[60px] object-fill"
+                />
+                <h1 className="text-xl font-semibold text-[#63202D]">USA</h1>
+              </div>
+
+              <div className="w-[130px] h-fit uni_col gap-1 border-r border-[#63202d51]">
+                <img
+                  src="/images/australia.png"
+                  alt="what we offer"
+                  className="w-[60px] object-fill"
+                />
+                <h1 className="text-xl font-semibold text-[#63202D]">Australia</h1>
+              </div>
+
+              <div className="w-[130px] h-fit uni_col gap-1">
+                <img
+                  src="/images/vietnam.webp"
+                  alt="what we offer"
+                  className="w-[60px] object-fill"
+                />
+                <h1 className="text-xl font-semibold text-[#63202D]">Vietnam</h1>
+              </div>
+            </div>
           </div>
           <img
             src="/images/world.png"
