@@ -22,6 +22,8 @@ import {
 export default function Contact() {
   const videos = ["/images/hero1.mp4", "/images/hero2.mp4"];
   const [current, setCurrent] = useState(0);
+  const [messageStatus, setMessageStatus] = useState("idle");
+  const [meetingStatus, setMeetingStatus] = useState("idle");
   const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
   const handleVideoEnd = () => {
@@ -30,6 +32,7 @@ export default function Contact() {
 
   const handleMessageSubmit = async (e) => {
     e.preventDefault();
+    setMessageStatus("loading");
 
     const formData = new FormData(e.target);
 
@@ -41,26 +44,44 @@ export default function Contact() {
       type: "message",
     };
 
-    const res = await fetch(`${API_URL}/api/contact`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    try {
+      const res = await fetch(`${API_URL}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    const result = await res.json();
+      const result = await res.json();
 
-    if (result.success) {
-      alert("Message sent!");
-      e.target.reset();
-    } else {
-      alert("Failed!");
+      if (result.success) {
+        setMessageStatus("success");
+
+        e.target.reset();
+
+        setTimeout(() => {
+          setMessageStatus("idle");
+        }, 2000);
+      } else {
+        setMessageStatus("error");
+
+        setTimeout(() => {
+          setMessageStatus("idle");
+        }, 2000);
+      }
+    } catch (error) {
+      setMessageStatus("error");
+
+      setTimeout(() => {
+        setMessageStatus("idle");
+      }, 2000);
     }
   };
 
   const handleMeetingSubmit = async (e) => {
     e.preventDefault();
+    setMeetingStatus("loading");
 
     const formData = new FormData(e.target);
 
@@ -70,22 +91,39 @@ export default function Contact() {
       time: formData.get("time"),
       type: "meeting",
     };
-    
-    const res = await fetch(`${API_URL}/api/contact`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
 
-    const result = await res.json();
+    try {
+      const res = await fetch(`${API_URL}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    if (result.success) {
-      alert("Meeting request sent!");
-      e.target.reset();
-    } else {
-      alert("Failed!");
+      const result = await res.json();
+
+      if (result.success) {
+        setMeetingStatus("success");
+
+        e.target.reset();
+
+        setTimeout(() => {
+          setMeetingStatus("idle");
+        }, 2000);
+      } else {
+        setMeetingStatus("error");
+
+        setTimeout(() => {
+          setMeetingStatus("idle");
+        }, 2000);
+      }
+    } catch (error) {
+      setMeetingStatus("error");
+
+      setTimeout(() => {
+        setMeetingStatus("idle");
+      }, 2000);
     }
   };
 
@@ -191,9 +229,18 @@ export default function Contact() {
                 ></textarea>
                 <button
                   type="submit"
-                  className="mt-3 bg-[#63202D] text-white py-1.5 text-lg px-3 rounded-lg hover:bg-[#4d1a21] transition duration-300 flex items-center gap-1"
+                  disabled={messageStatus === "loading"}
+                  className="mt-3 bg-[#63202D] text-white py-1.5 text-lg px-3 rounded-lg hover:bg-[#4d1a21] transition duration-300 flex items-center gap-1 disabled:opacity-70"
                 >
-                  <IoIosSend /> Send Message
+                  <IoIosSend />
+
+                  {messageStatus === "loading"
+                    ? "Sending..."
+                    : messageStatus === "success"
+                      ? "Message Sent!"
+                      : messageStatus === "error"
+                        ? "Failed!"
+                        : "Send Message"}
                 </button>
               </form>
             </div>
@@ -227,24 +274,27 @@ export default function Contact() {
             <form onSubmit={handleMeetingSubmit}>
               <div className="w-full flex flex-col md:flex-row items-center gap-3">
                 <div className="w-full flex flex-col gap-1">
-                  <label className="text-base font-semibold">Preferred Date</label>
-                <input
-                  type="date"
-                  name="date"
-                  placeholder="Preferred Date"
-                  className="w-full py-2 px-3 rounded-md border shadow-lg focus:shadow focus:outline-none"
-                />  
+                  <label className="text-base font-semibold">
+                    Preferred Date
+                  </label>
+                  <input
+                    type="date"
+                    name="date"
+                    placeholder="Preferred Date"
+                    className="w-full py-2 px-3 rounded-md border shadow-lg focus:shadow focus:outline-none"
+                  />
                 </div>
                 <div className="w-full flex flex-col gap-1">
-                  <label className="text-base font-semibold">Preferred Time</label>
+                  <label className="text-base font-semibold">
+                    Preferred Time
+                  </label>
                   <input
-                  type="time"
-                  name="time"
-                  placeholder="Preferred Time"
-                  className="w-full py-2 px-3 rounded-md border shadow-lg focus:shadow focus:outline-none"
-                />
+                    type="time"
+                    name="time"
+                    placeholder="Preferred Time"
+                    className="w-full py-2 px-3 rounded-md border shadow-lg focus:shadow focus:outline-none"
+                  />
                 </div>
-                
               </div>
               <input
                 type="tel"
@@ -254,9 +304,18 @@ export default function Contact() {
               />
               <button
                 type="submit"
-                className="mt-3 bg-[#63202D] text-white py-1.5 text-lg px-3 rounded-lg hover:bg-[#4d1a21] transition duration-300 flex items-center gap-1"
+                disabled={meetingStatus === "loading"}
+                className="mt-3 bg-[#63202D] text-white py-1.5 text-lg px-3 rounded-lg hover:bg-[#4d1a21] transition duration-300 flex items-center gap-1 disabled:opacity-70"
               >
-                <MdDateRange /> Schedule Meeting
+                <MdDateRange />
+
+                {meetingStatus === "loading"
+                  ? "Sending..."
+                  : meetingStatus === "success"
+                    ? "Meeting Scheduled!"
+                    : meetingStatus === "error"
+                      ? "Failed!"
+                      : "Schedule Meeting"}
               </button>
             </form>
           </div>
@@ -288,9 +347,7 @@ export default function Contact() {
             >
               aplusmartmedicalsurgical@gmail.com
             </a>
-            <p className="text-sm text-[#686868]">
-              (24/7 Available)
-            </p>
+            <p className="text-sm text-[#686868]">(24/7 Available)</p>
           </div>
 
           {/* Visit us */}
@@ -298,9 +355,7 @@ export default function Contact() {
             <div className="flex items-center gap-2 text-[#63202D] font-semibold text-xl">
               <IoLocation /> Visit Us
             </div>
-            <p className="text-lg font-medium text-[#161616]">
-              Mirpur, Dhaka.
-            </p>
+            <p className="text-lg font-medium text-[#161616]">Mirpur, Dhaka.</p>
             <p className="text-sm text-[#686868]">(24/7 Available)</p>
           </div>
 
