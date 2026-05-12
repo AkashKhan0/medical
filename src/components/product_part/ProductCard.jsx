@@ -11,7 +11,7 @@ export default function ProductCard({ product }) {
           <img
             src={product.images?.[0]?.url || "/images/placeholder.jpg"}
             alt={product.name}
-            className="w-full h-full object-cover hover:scale-105 transition duration-300"
+            className="w-full h-full object-contain hover:scale-105 transition duration-300"
           />
         </div>
 
